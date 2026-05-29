@@ -830,7 +830,8 @@ section h3 {
 
   .header-brand {
     order: 1;
-    flex: 0 1 auto;
+    flex: 1;
+    text-align: center;
   }
 
   header h1 {
@@ -888,7 +889,8 @@ section h3 {
 
   .header-brand {
     order: 1;
-    flex: 0 1 auto;
+    flex: 1;
+    text-align: center;
   }
 
   header h1 {
@@ -1145,7 +1147,7 @@ section h3 {
     gap: 8px;
     overflow-x: auto;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   nav a, .dropbtn {
