@@ -383,7 +383,7 @@ section {
 #sobre-mi,
 #contacto,
 #actividades {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 section:not(.hero) {
@@ -820,9 +820,9 @@ section h3 {
 /* Media queries para celular */
 @media (max-width: 768px) {
   header {
-    padding: 4px 8px 2px;
+    padding: 2px 8px 2px;
     height: auto;
-    min-height: 44px;
+    min-height: 40px;
     flex-wrap: wrap;
     align-items: center;
     gap: 2px;
@@ -846,7 +846,7 @@ section h3 {
 
   .logo {
     height: 70px;
-    margin-top: 48px;
+    margin-top: 38px;
     order: 2;
   }
 
@@ -962,7 +962,7 @@ section h3 {
 
   .hero {
     background-attachment: scroll;
-    height: 90vh;
+    height: 85vh;
   }
 
   .hero h2 {
@@ -995,7 +995,7 @@ section h3 {
   }
 
   section {
-    padding: 70px 12px 25px;
+    padding: 55px 12px 25px;
   }
 
   .cards {
@@ -1100,7 +1100,7 @@ section h3 {
   #sobre-mi,
   #contacto,
   #actividades {
-    padding-top: 90px;
+    padding-top: 70px;
   }
 
   .modal {
@@ -1140,7 +1140,7 @@ section h3 {
 
   .logo {
     height: 55px;
-    margin-top: 42px;
+    margin-top: 34px;
   }
 
   nav {
