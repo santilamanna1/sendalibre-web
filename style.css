@@ -65,6 +65,10 @@ header h1 {
   transform: scale(1.15);
 }
 
+nav {
+  margin-top: 4px;
+}
+
 nav a {
   color: white;
   margin-left: 30px;
@@ -122,6 +126,185 @@ h2 {
   padding: 0;
 }
 
+.hero .hero-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  font-size: clamp(1.05rem, 3vw, 1.6rem);
+  letter-spacing: 1px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-small {
+  padding: 4px 12px;
+  font-size: 0.65rem;
+  white-space: nowrap;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+}
+
+/* Próximas salidas */
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a2436;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+}
+
+.schedule-date {
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.schedule-status {
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.schedule-status.full {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.schedule-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal {
+  background: #1a2436;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 420px;
+  width: 90%;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: white;
+}
+
+.modal h3 {
+  font-family: 'Cinzel', serif;
+  color: var(--accent);
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.date-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.date-form label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.7);
+}
+
+.date-form input[type="date"] {
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.date-form input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.date-form .btn {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.modal-whatsapp {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.modal-whatsapp a {
+  color: #25D366;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.modal-whatsapp a:hover {
+  text-decoration: underline;
+}
+
 .hero-lanin h2 {
   font-family: 'Cinzel', serif;
   font-size: clamp(2rem, 6vw, 4rem);
@@ -144,18 +327,20 @@ section:not(.hero) h2 {
 
 .btn {
   display: inline-block;
-  padding: 15px 40px;
+  padding: 10px 28px;
   background: var(--accent);
   color: white;
   text-decoration: none;
   border-radius: 50px;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
   transition: 0.3s;
 }
 
 .btn:hover {
   background: #d35400;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .cards {
@@ -193,6 +378,12 @@ section:not(.hero) h2 {
 
 section {
   padding: 60px 15px 40px 15px;
+}
+
+#sobre-mi,
+#contacto,
+#actividades {
+  padding-top: 120px;
 }
 
 section:not(.hero) {
@@ -488,6 +679,42 @@ section ul li:last-child {
   border-bottom: none;
 }
 
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-photo {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-photo {
+    width: 220px;
+    height: 220px;
+  }
+}
+
 section h3 {
   font-family: 'Cinzel', serif;
   font-size: 1.3rem;
@@ -587,4 +814,232 @@ section h3 {
 
 .tab-content p {
   max-width: 100%;
+}
+
+/* Media queries para celular */
+@media (max-width: 768px) {
+  header {
+    padding: 8px 15px 4px;
+    height: auto;
+    min-height: 60px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .header-brand {
+    order: 1;
+    flex: 1;
+    margin-right: 0;
+  }
+
+  header h1 {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  .tagline {
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+  }
+
+  .logo {
+    height: 50px;
+    margin-top: 70px;
+    order: 2;
+  }
+
+  .logo:hover {
+    transform: scale(1.1);
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 0 6px;
+  }
+
+nav {
+  margin-top: 4px;
+}
+
+nav a {
+    margin-left: 0;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+  }
+
+  .dropbtn {
+    margin-left: 0;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+  }
+
+  .dropdown-content {
+    min-width: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .submenu {
+    left: 0;
+    top: 100%;
+  }
+
+  .hero {
+    background-attachment: scroll;
+  }
+
+  .hero h2 {
+    font-size: 1.1rem;
+  }
+
+  .hero-lanin h2 {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    letter-spacing: 4px;
+  }
+
+  .hero-lanin p {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  section:not(.hero) h2 {
+    font-size: 1.2rem;
+  }
+
+  section p, .tab-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .btn {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px 0;
+  }
+
+  .day-card {
+    padding: 20px;
+  }
+
+  .day-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .day-stats {
+    gap: 10px;
+  }
+
+  .stat {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .difficulty-stats {
+    gap: 15px;
+  }
+
+  .stat-box {
+    padding: 20px;
+    min-width: 120px;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .tabs-nav {
+    gap: 2px;
+  }
+
+  .tab-btn {
+    padding: 8px 10px;
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+  }
+
+  .tab-content {
+    padding: 20px;
+  }
+
+  section {
+    padding: 80px 10px 30px 10px;
+  }
+
+  section ul li {
+    padding: 10px 0;
+    padding-left: 20px;
+    font-size: 0.9rem;
+  }
+
+  section h3 {
+    font-size: 1.1rem;
+  }
+
+  .whatsapp, .instagram {
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+  }
+
+  .whatsapp svg, .instagram svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .instagram {
+    bottom: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+  }
+
+  .logo {
+    height: 40px;
+    margin-top: 65px;
+  }
+
+  nav {
+    gap: 5px;
+    overflow-x: auto;
+  }
+
+  nav a, .dropbtn {
+    font-size: 0.55rem;
+    white-space: nowrap;
+  }
+
+  .hero h2 {
+    font-size: 0.95rem;
+  }
+
+  section:not(.hero) h2 {
+    font-size: 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
 }
