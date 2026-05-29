@@ -819,11 +819,68 @@ section h3 {
 /* Media queries para celular */
 @media (max-width: 768px) {
   header {
-    padding: 6px 10px 4px;
+    padding: 4px 8px 2px;
     height: auto;
-    min-height: 50px;
+    min-height: 44px;
     flex-wrap: wrap;
     align-items: center;
+    gap: 2px;
+  }
+
+  .header-brand {
+    order: 1;
+    flex: 0 1 auto;
+  }
+
+  header h1 {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+  }
+
+  .tagline {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+  }
+
+  .logo {
+    height: 70px;
+    margin-top: 48px;
+    order: 2;
+  }
+
+  .logo:hover {
+    transform: scale(1.1);
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 12px;
+    padding: 4px 0 2px;
+    margin-top: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .dropbtn {
+    margin-left: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
   }
 
   .header-brand {
@@ -1063,24 +1120,28 @@ section h3 {
 
 @media (max-width: 480px) {
   header h1 {
-    font-size: 0.6rem;
-    letter-spacing: 0.5px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
+
+  .tagline {
+    font-size: 0.55rem;
   }
 
   .logo {
-    height: 45px;
-    margin-top: 50px;
+    height: 55px;
+    margin-top: 42px;
   }
 
   nav {
-    gap: 6px;
+    gap: 8px;
     overflow-x: auto;
     flex-wrap: nowrap;
     justify-content: flex-start;
   }
 
   nav a, .dropbtn {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
   }
 
   .hero h2 {
