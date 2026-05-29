@@ -483,7 +483,8 @@ button:hover {
 
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 }
 
 .dropbtn {
@@ -875,12 +876,14 @@ section h3 {
     letter-spacing: 0.5px;
     white-space: nowrap;
     flex-shrink: 0;
+    display: inline-block;
   }
 
   .dropbtn {
     margin-left: 0;
     font-size: 0.75rem;
     letter-spacing: 0.5px;
+    display: inline-block;
   }
 
   .header-brand {
@@ -937,6 +940,11 @@ section h3 {
     margin-left: 0;
     font-size: 0.6rem;
     letter-spacing: 0.5px;
+  }
+
+  .dropdown {
+    display: flex;
+    align-items: center;
   }
 
   .dropdown-content {
