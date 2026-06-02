@@ -43,15 +43,6 @@ header h1 {
   line-height: 1;
 }
 
-.social-handle {
-  font-size: 0.7rem;
-  color: #bbb;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.5px;
-  margin: 2px 0 0 0;
-  line-height: 1;
-}
-
 .tagline {
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
