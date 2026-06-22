@@ -52,3 +52,19 @@ function openScheduleModal() {
 function closeScheduleModal() {
   document.getElementById('schedule-modal').classList.remove('active');
 }
+
+// Reposicionar dropdown si se sale de la pantalla
+document.querySelectorAll('.dropdown').forEach(dropdown => {
+  dropdown.addEventListener('mouseenter', function() {
+    const content = this.querySelector('.dropdown-content');
+    if (!content) return;
+    const rect = content.getBoundingClientRect();
+    if (rect.bottom > window.innerHeight) {
+      content.style.top = 'auto';
+      content.style.bottom = '100%';
+    } else {
+      content.style.top = '100%';
+      content.style.bottom = 'auto';
+    }
+  });
+});
