@@ -698,7 +698,7 @@ section ul li:last-child {
 
 .about-photo {
   width: 300px;
-  height: 300px;
+  height: 380px;
   object-fit: cover;
   border-radius: 16px;
   flex-shrink: 0;
@@ -712,6 +712,34 @@ section ul li:last-child {
   margin: 0;
 }
 
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.about-logos {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.cert-logo {
+  width: calc(50% - 5px);
+  height: auto;
+  object-fit: contain;
+}
+
+.cert-logo.apn {
+  background: #fff;
+  padding: 4px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
   .about-wrapper {
     flex-direction: column;
@@ -720,7 +748,11 @@ section ul li:last-child {
 
   .about-photo {
     width: 220px;
-    height: 220px;
+    height: 280px;
+  }
+
+  .about-left {
+    width: 220px;
   }
 }
 
@@ -1092,7 +1124,11 @@ section h3 {
 
   .about-photo {
     width: 180px;
-    height: 180px;
+    height: 230px;
+  }
+
+  .about-left {
+    width: 180px;
   }
 
   .whatsapp, .instagram {
@@ -1185,6 +1221,10 @@ section h3 {
 
   .about-photo {
     width: 150px;
-    height: 150px;
+    height: 190px;
+  }
+
+  .about-left {
+    width: 150px;
   }
 }
