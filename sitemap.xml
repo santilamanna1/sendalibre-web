@@ -13,12 +13,32 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.sendalibre.com.ar/tilcara-calilegua.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sendalibre.com.ar/cerro-penitentes.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sendalibre.com.ar/cerro-tres-picos.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.sendalibre.com.ar/parque-lanin.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sendalibre.com.ar/actividades.html</loc>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sendalibre.com.ar/iruya-nazareno.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sendalibre.com.ar/volcan-san-francisco.html</loc>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.sendalibre.com.ar/sobre-mi.html</loc>
@@ -29,7 +49,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.sendalibre.com.ar/experiencias.html</loc>
-    <priority>0.6</priority>
+    <loc>https://www.sendalibre.com.ar/gracias.html</loc>
+    <priority>0.3</priority>
   </url>
 </urlset>
